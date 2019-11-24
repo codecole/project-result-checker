@@ -37,7 +37,7 @@ else if ( !empty($text) ) {
 
 $csv=fopen("result.csv","r");
 
-while(($student=fgetcsv($csv,100,",")) !== FALSE){
+while(($student=fgetcsv($csv,1,",")) !== FALSE){
 
     $matric_no=$student[0];
     $name=$student[1];
@@ -46,6 +46,7 @@ while(($student=fgetcsv($csv,100,",")) !== FALSE){
     if($text==$matric_no){
 
         $response = "END ".$name." Your Result is ".$result." \n";
+        $response = "END ".$name." Your ID is ".$matric_no." \n";
 
     }
     else{

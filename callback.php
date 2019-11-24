@@ -5,7 +5,7 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
-$text        = $_GET["text"];
+$text        = $_POST["text"];
 
 
 //This is the first menu 

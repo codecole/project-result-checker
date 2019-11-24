@@ -16,9 +16,6 @@ if ( $text == "" ) {
 
 }
 
-
-
-
 // Menu for a user who selects '1'
 
 // if($text=="22"){
@@ -33,41 +30,28 @@ if ( $text == "" ) {
 
 // }
 
-else if ($text == "1") {
-    $response  = "CON Choose account information you want to view \n";
-    $response .= "1. Account Number \n";
-    $response .= "2. Account Balance \n";
-}
-
 
 
 //Menu for a user who selects '2' 
+$csv=fopen("result.csv");
 
-else if ($text == "2324") {
-    //note that we are using the $phoneNumber variable we got form the HTTP POST data.
-    $response = "END Your Result is Eng:234,Bio:34 \n";
+while(($student=fgetcsv($csv,1000,",")) !== FALSE){
+
+    $matric_no=$student[0];
+    $name=$student[1];
+    $result=$student[2];
+
+    if($text==$matric_no){
+
+        $response = "END ".$name." Your Result is ".$result." \n";
+
+    }
+    else{
+        $response  = "CON Please enter a valid Matric number below\n";
+
+    }
+
 }
-
-
-
-
-//Menu for a user who selects '1' from second menu
-
-
-else if ($text == "1*1") {
-    $response = "END Your account number is ACC1001\n";
-}
-
-
-
-//Menu for a user who selects '2' from second menu
-
-else if ($text == "1*2") {
-    $response = "END Your balance is USD 10.78\n";
-}
-
-
-
 
 //echo response
 header('Content-type: text/plain');

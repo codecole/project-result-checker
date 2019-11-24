@@ -35,7 +35,7 @@ if ( $text == "" ) {
 //Menu for a user who selects '2' 
 else if ( !empty($text) ) {
 
-    ECHO $csv=fopen("result.csv");
+    ECHO $csv=fopen("result.csv","r");
 
 while(($student=fgetcsv($csv,100,",")) !== FALSE){
 
@@ -56,25 +56,6 @@ while(($student=fgetcsv($csv,100,",")) !== FALSE){
 }
 }
 
-// while(($student=fgetcsv($csv,100,",")) !== FALSE){
-
-//     $matric_no=$student[0];
-//     $name=$student[1];
-//     $result=$student[2];
-
-//     if($text==$matric_no){
-
-//         $response = "END ".$name." Your Result is ".$result." \n";
-
-//     }
-//     else{
-//         $response  = "CON Please enter a valid Matric number below\n";
-
-//     }
-
-// }
-
-echo $csv=fopen("result.csv");
 
 //echo response
 header('Content-type: text/plain');

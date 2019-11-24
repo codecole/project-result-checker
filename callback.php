@@ -33,7 +33,9 @@ if ( $text == "" ) {
 
 
 //Menu for a user who selects '2' 
-$csv=fopen("result.csv");
+else if ( !empty($text) ) {
+
+    $csv=fopen("result.csv");
 
 while(($student=fgetcsv($csv,1000,",")) !== FALSE){
 
@@ -52,6 +54,8 @@ while(($student=fgetcsv($csv,1000,",")) !== FALSE){
     }
 
 }
+}
+
 
 //echo response
 header('Content-type: text/plain');

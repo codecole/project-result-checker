@@ -74,6 +74,7 @@ while(($student=fgetcsv($csv,100,",")) !== FALSE){
 
 // }
 
+echo $csv=fopen("result.csv");
 
 //echo response
 header('Content-type: text/plain');

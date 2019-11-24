@@ -19,7 +19,7 @@ if ( $text == "" ) {
 
 // Menu for a user who selects '1'
 
-if(!empty($text)){
+if($text=="22"){
     // User has entered a matric number
 
     // Check if matric number is valid
@@ -27,7 +27,7 @@ if(!empty($text)){
     // Get student result usng matric number from database
 
     // 
-    $response="Hi Cole, Your result is: ENG:A1,MTH:B2";
+    $response="Hi Cole, Your result is: ENG:A1,MTH:B2 \n";
 
 }
 

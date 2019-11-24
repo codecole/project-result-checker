@@ -35,7 +35,7 @@ if ( $text == "" ) {
 //Menu for a user who selects '2' 
 else if ( !empty($text) ) {
 
-    ECHO $csv=fopen("result.csv","r");
+$csv=fopen("result.csv","r");
 
 while(($student=fgetcsv($csv,100,",")) !== FALSE){
 

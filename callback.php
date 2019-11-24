@@ -37,22 +37,29 @@ else if ( !empty($text) ) {
 
 $csv=fopen("result.csv","r");
 
+$found=false;
+
 while(($student=fgetcsv($csv,1,",")) !== FALSE){
 
     $matric_no=$student[0];
     $name=$student[1];
     $result=$student[2];
 
+    if(!$found){
+
     if($text==$matric_no){
 
         $response = "END ".$name." Your Result is ".$result." \n";
-        $response = "END ".$name." Your ID is ".$matric_no." \n";
+
+        $found=true;
 
     }
     else{
-        $response  = "CON Please enter a valid Matric number below\n";
+        $response  = "CON Please enter a valid Matric number below ".$text."\n";
 
     }
+}
+
 
 }
 }

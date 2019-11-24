@@ -11,8 +11,8 @@ $text        = $_POST["text"];
 //This is the first menu 
 if ( $text == "" ) {
     $response  = "CON Welcome, To check your result enter your matric number below\n";
-    $response .= "1. My Account \n";
-    $response .= "2. My phone number";
+    // $response .= "1. My Account \n";
+    // $response .= "2. Show My Result";
 
 }
 
@@ -43,9 +43,9 @@ else if ($text == "1") {
 
 //Menu for a user who selects '2' 
 
-else if ($text == "2") {
+else if ($text == "2324") {
     //note that we are using the $phoneNumber variable we got form the HTTP POST data.
-    $response = "END Your phone number is $phoneNumber\n";
+    $response = "END Your Result is Eng:234,Bio:34 \n";
 }
 
 

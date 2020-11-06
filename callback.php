@@ -16,30 +16,14 @@ if ( $text == "" ) {
 
 }
 
-// Menu for a user who selects '1'
-
-// if($text=="22"){
-//     // User has entered a matric number
-
-//     // Check if matric number is valid
-
-//     // Get student result usng matric number from database
-
-//     // 
-//     $response="Hi Cole, Your result is: ENG:A1,MTH:B2 \n";
-
-// }
-
-
-
-//Menu for a user who selects '2' 
+//Menu when a value is entered
 else if ( !empty($text) ) {
 
 $csv=fopen("result.csv","r");
 
 $found=false;
 
-while(($student=fgetcsv($csv,1,",")) !== FALSE){
+while(($student=fgetcsv($csv,100,",")) !== FALSE){
 
     $matric_no=$student[0];
     $name=$student[1];
@@ -55,8 +39,7 @@ while(($student=fgetcsv($csv,1,",")) !== FALSE){
 
     }
     else{
-        $response  = "CON Please enter a valid Matric number below ".$text."\n";
-
+        $response  = "END ".$text." Is not a valid Matric number.\n";
     }
 }
 

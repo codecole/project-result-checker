@@ -34,7 +34,7 @@ while(($student=fgetcsv($csv,100,",")) !== FALSE){
 
     if($text==$matric_no){
 
-        $response = "END ".$first_name.+" "+$last_name." Your Result is ".$result." \n";
+        $response = "END ".$first_name. $last_name." Your Result is ".$result." \n";
 
         $found=true;
 
